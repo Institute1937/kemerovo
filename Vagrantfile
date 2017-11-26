@@ -1,6 +1,7 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "debian/jessie64"
   config.vm.define 'kemerovo'
+  config.vm.hostname = 'kemerovo'
   config.ssh.forward_x11 = true
   config.ssh.forward_agent = true
   config.vm.synced_folder "src/", "/srv/website"
