@@ -22,7 +22,7 @@ vagrant up
 ### From Vagrantcloud
 
 ```
-vagrant init io37/kemerovo --box-version 0.0.4
+vagrant init io37/kemerovo --box-version 0.0.5
 vagrant up
 ```
 
