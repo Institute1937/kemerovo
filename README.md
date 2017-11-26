@@ -51,3 +51,6 @@ vagrant ssh -c "cd marsden && sudo make start"
 A sample dockerized application is included (marsden). This has Clojure, Javascript, and Nginx containers. The above command will build and run the sample application. It is mapped on port 3100 and will be accessible at http://localhost:3100
 
 
+# WHY?
+
+Kemerovo is a dev box with docker installed and a sample app. The idea is reduce reliance still further on OSX, and have docker itself contained in a vm 
