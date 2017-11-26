@@ -11,7 +11,7 @@ Vagrant 2.0.1
 
 # SETUP
 
-## From Github
+### From Github
 
 ```
 git clone https://github.com/Institute1937/kemerovo
@@ -19,7 +19,7 @@ cd kemerovo
 vagrant up
 ```
 
-## From Vagrantcloud
+### From Vagrantcloud
 
 ```
 vagrant init io37/kemerovo --box-version 0.0.4
