@@ -1,4 +1,4 @@
-### PREREQUISITES
+# PREREQUISITES
 
 VirtualBox and Vagrant - eg
 
@@ -9,7 +9,7 @@ VirtualBox and Vagrant - eg
 Vagrant 2.0.1
 ```
 
-### SETUP
+# SETUP
 
 ## From Github
 
@@ -27,14 +27,14 @@ vagrant up
 ```
 
 
-### PREINSTALLED
+# PREINSTALLED
 
  - debian 8 (jessie)
  - docker
  - docker-compose
  - node
 
-### USAGE
+# USAGE
 
 ```
 vagrant ssh
@@ -42,7 +42,7 @@ vagrant ssh
 
 This will connect you into the Vagrant machine
 
-### SAMPLE APPLICATION
+# SAMPLE APPLICATION
 
 ```
 vagrant ssh -c "cd marsden && sudo make start"
