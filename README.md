@@ -32,7 +32,7 @@ vagrant up
  - debian 8 (jessie)
  - docker
  - docker-compose
- - node
+ - node / npm
 
 # USAGE
 
