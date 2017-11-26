@@ -27,12 +27,22 @@ vagrant up
 ```
 
 
-# PREINSTALLED
+# INSTALLED
 
- - debian 8 (jessie)
- - docker
- - docker-compose
- - node / npm
+```
+☁  ~  docker -v
+Docker version 17.09.0-ce, build afdb6d4
+☁  ~  docker-compose -v
+docker-compose version 1.17.1, build 6d101fb
+☁  ~  node -v
+v8.9.1
+☁  ~  npm -v
+5.5.1
+☁  ~  uname -a
+Linux kemerovo 3.16.0-4-amd64 #1 SMP Debian 3.16.43-2+deb8u2 (2017-06-26) x86_64 GNU/Linux
+☁  ~  cat /etc/os-release
+PRETTY_NAME="Debian GNU/Linux 8 (jessie)"
+```
 
 # USAGE
 
