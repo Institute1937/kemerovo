@@ -14,7 +14,7 @@ Vagrant 2.0.1
 ### From Github
 
 ```
-git clone https://github.com/Institute1937/kemerovo
+git clone https://github.com/cerico/kemerovo
 cd kemerovo
 vagrant up
 ```
