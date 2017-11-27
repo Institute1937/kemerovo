@@ -46,8 +46,16 @@ This will connect you into the Vagrant machine
 
 # SAMPLE APPLICATION
 
+### From outside
 ```
-vagrant ssh -c "cd marsden && sudo make start"
+vagrant ssh -c "cd /srv/website/marsden && sudo make start"
+```
+
+### From inside
+```
+vagrant ssh 
+cd /srv/website/marsden
+sudo make start
 ```
 
 A sample dockerized application is included (marsden). This has Clojure, Javascript, and Nginx containers. The above command will build and run the sample application. It is mapped on port 3100 and will be accessible at http://localhost:3100

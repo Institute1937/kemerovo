@@ -13,7 +13,7 @@ chmod +x /usr/local/bin/docker-compose
 if [ ! -d ~vagrant/.oh-my-zsh ]; then
       git clone https://github.com/robbyrussell/oh-my-zsh.git ~vagrant/.oh-my-zsh
       git clone https://github.com/cerico/dotfiles/ ~vagrant/dotfiles
-      git clone https://github.com/Institute1937/marsden.git ~vagrant/marsden
+      git clone https://github.com/Institute1937/marsden.git /srv/website/marsden
 fi
 ln -s ~vagrant/dotfiles/.zshrc ~vagrant/.zshrc
 ln -s ~vagrant/dotfiles/zfiles ~vagrant/zfiles
