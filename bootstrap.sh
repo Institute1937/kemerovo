@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-apt-get install -y tree software-properties-common git-core openssl libssl-dev git vim curl zsh 
+apt-get install -y postgresql postgresql-client tree software-properties-common git-core openssl libssl-dev git vim curl zsh 
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 apt-add-repository "deb [arch=amd64] https://download.docker.com/linux/$(. /etc/os-release; echo "$ID") $(lsb_release -cs) stable"
