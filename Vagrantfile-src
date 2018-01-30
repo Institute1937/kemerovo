@@ -17,7 +17,11 @@ sudo apt-add-repository "deb [arch=amd64] https://download.docker.com/linux/$(. 
 sudo apt-get update
 
 ###--- Main Installs ---###
-sudo apt-get install inotify-tools esl-erlang elixir nodejs docker-ce build-essential apt-transport-https ca-certificates gnupg2 autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm3 libgdbm-dev git-core postgresql postgresql-client -y
+sudo apt-get install clojure inotify-tools esl-erlang elixir nodejs docker-ce build-essential apt-transport-https ca-certificates gnupg2 autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm3 libgdbm-dev git-core postgresql postgresql-client -y
+
+###--- Clojure  ---###
+wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
+sudo mv lein /usr/local/bin
 
 ###--- zsh ---###
 if [ ! -d ~vagrant/.oh-my-zsh ]; then
