@@ -4,7 +4,7 @@
 
 ## Version
 
-v0.1.0
+v0.1.1
 
 ## TLDR / What is it?
 

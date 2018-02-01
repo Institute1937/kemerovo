@@ -17,7 +17,7 @@ sudo apt-add-repository "deb [arch=amd64] https://download.docker.com/linux/$(. 
 sudo apt-get update
 
 ###--- Main Installs ---###
-sudo apt-get install default-jre libreadline-dev inotify-tools esl-erlang elixir nodejs docker-ce build-essential apt-transport-https ca-certificates gnupg2 autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm3 libgdbm-dev git-core postgresql postgresql-client -y
+sudo apt-get install default-jre  libpq-dev libreadline-dev inotify-tools esl-erlang elixir nodejs docker-ce build-essential apt-transport-https ca-certificates gnupg2 autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm3 libgdbm-dev git-core postgresql postgresql-client -y
 
 ###--- zsh ---###
 if [ ! -d ~vagrant/.oh-my-zsh ]; then
@@ -56,6 +56,9 @@ rm go1.9.3.linux-amd64.tar.gz
 mix local.hex --force
 mix archive.install https://github.com/phoenixframework/archives/raw/master/phx_new.ez --force
 
+# sudo -u postgres createuser vagrant -s
+sudo su postgres -c "psql -c \"CREATE ROLE vagrant SUPERUSER LOGIN PASSWORD 'vagrant'\" "
+sudo su postgres -c "createdb -E UTF8 -T template0 --locale=en_US.utf8 -O vagrant vagrant"
 
 ###--- Docker Compose ---###
 sudo curl -L https://github.com/docker/compose/releases/download/1.17.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
@@ -77,3 +80,4 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 8000, host: 18000
   config.vm.network "forwarded_port", guest: 8080, host: 18080
 end
+

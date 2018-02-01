@@ -1,7 +1,7 @@
 Vagrant.configure("2") do |config|
 
   config.vm.box = "io37/kemerovo"
-  config.vm.box_version = "0.1.0"
+  config.vm.box_version = "0.1.1"
   config.vm.synced_folder "../shared", "/shared"
   
   config.vm.network "forwarded_port", guest: 3100, host: 3100
