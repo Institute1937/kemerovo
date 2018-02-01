@@ -37,6 +37,14 @@ VirtualBox and Vagrant - eg
 Vagrant 2.0.1
 ```
 
+A shared folder one level up from the vm
+
+```
+➜  kemerovo git:(master) mdkir ../shared
+```
+
+Or you can comment that line out if you don't want it
+
 ## How do I run it?
 
 ```
@@ -44,6 +52,11 @@ git clone https://github.com/cerico/kemerovo
 cd kemerovo
 vagrant up
 ```
+
+## Where is my app running?
+
+If you have eg a rails app on port 3000, it will be accessible on http://localhost:13000, change the mappings as you see fit
+
 
 ## Why are there two versions?
 
