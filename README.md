@@ -37,32 +37,29 @@ VirtualBox and Vagrant - eg
 Vagrant 2.0.1
 ```
 
-A shared folder one level up from the vm
-
-```
-➜  kemerovo git:(master) mdkir ../shared
-```
-
-Or you can comment that line out if you don't want it
-
-## How do I run it?
 
 ```
 git clone https://github.com/cerico/kemerovo
 cd kemerovo
+cd larch || cd poplar # Either of these will work
+sudo echo "192.168.33.17 rails.kemerovo.box" >> /etc/hosts # Optional
 vagrant up
 ```
 
-## Where is my app running?
+## Where is my starter app running?
 
-If you have eg a rails app on port 3000, it will be accessible on http://localhost:13000, change the mappings as you see fit
+There is one starter rails app, with go, clojure and phoenix to follow
+
+```
+vagrant ssh
+cd ~/starters/rails && bundle exec passenger start -p 13000
+```
+
+This is now accessible from your mac at http://localhost:13000, and if you added the entry to your macs /etc/hosts file as above, it will also be available at http://rails.kemerovo.box
+
+## Larch / Poplar
+
+Larch and Poplar are both identical, Larch is a prepackaged box on vagrant cloud, Poplar is a vanilla debian box, with all packages and configuration done by script. The end result is the same, though Poplar is more configurable
 
 
-## Why are there two versions?
-
-They are both exactly the same. You can rename the files and use either one.
-
-Vagrantfile-src uses a base debian box and runs scripts to install various the packages needed for this box
-
-Vagrantfile is the result of packaging that box up and storing on vagrant cloud, so the setup has already been done
 
