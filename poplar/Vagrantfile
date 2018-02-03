@@ -83,8 +83,8 @@ git clone https://github.com/cerico/kemerovo.git ~vagrant/templates
 sudo cp ~vagrant/templates/nginx/nginx.conf /etc/nginx/
 sudo cp ~vagrant/templates/nginx/sample.conf /etc/nginx/conf.d/
 
-mkdir -p ~vagrant/starters/rails
-cd ~vagrant/starters/rails && ~vagrant/.rbenv/shims/rails new starter --database=postgresql
+mkdir -p ~vagrant/starters
+cd ~vagrant/starters && ~vagrant/.rbenv/shims/rails new rails --database=postgresql
 sudo systemctl reload nginx
 
 SCRIPT
