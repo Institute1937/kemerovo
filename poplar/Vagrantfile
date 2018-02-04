@@ -84,7 +84,7 @@ sudo cp ~vagrant/templates/nginx/nginx.conf /etc/nginx/
 sudo cp ~vagrant/templates/nginx/sample.conf /etc/nginx/conf.d/
 
 mkdir -p ~vagrant/starters
-cd ~vagrant/starters && ~vagrant/.rbenv/shims/rails new rails --database=postgresql
+cd ~vagrant/starters && ~vagrant/.rbenv/shims/rails new hello-rails --database=postgresql
 sudo systemctl reload nginx
 
 SCRIPT
