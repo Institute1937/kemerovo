@@ -4,7 +4,7 @@
 
 ## Version
 
-v0.1.1
+v0.1.3
 
 ## TLDR / What is it?
 
@@ -26,6 +26,8 @@ Node 8.9
 
 rbenv 1.1
 
+Leiningen 2.8.1 on Java 1.7.0_151 OpenJDK 64-Bit Server VM
+
 ## PREREQUISITES
 
 VirtualBox and Vagrant - eg
@@ -46,20 +48,20 @@ sudo echo "192.168.33.17 rails.kemerovo.box" >> /etc/hosts # Optional
 vagrant up
 ```
 
-## Where is my starter app running?
+## Starter App
 
 There is one starter rails app, with go, clojure and phoenix to follow
 
 ```
 vagrant ssh
-cd ~/starters/rails && bundle exec passenger start -p 13000
+cd ~/starters/hello-rails && bundle exec passenger start -p 13000
 ```
 
 This is now accessible from your mac at http://localhost:13000, and if you added the entry to your macs /etc/hosts file as above, it will also be available at http://rails.kemerovo.box
 
 ## Larch / Poplar
 
-Larch and Poplar are both identical, Larch is a prepackaged box on vagrant cloud, Poplar is a vanilla debian box, with all packages and configuration done by script. The end result is the same, though Poplar is more configurable
+Larch and Poplar are both identical, Larch is a prepackaged box on vagrant cloud, Poplar is a vanilla debian box, with all packages and configuration done by script. The end result is the same, though Poplar is more configurable if you want to make changes. 
 
 
 
