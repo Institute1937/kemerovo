@@ -26,8 +26,6 @@ Node 8.9
 
 rbenv 1.1
 
-Leiningen 2.8.1 on Java 1.7.0_151 OpenJDK 64-Bit Server VM
-
 ## PREREQUISITES
 
 VirtualBox and Vagrant - eg
@@ -61,7 +59,18 @@ This is now accessible from your mac at http://localhost:13000, and if you added
 
 ## Larch / Poplar
 
-Larch and Poplar are both identical, Larch is a prepackaged box on vagrant cloud, Poplar is a vanilla debian box, with all packages and configuration done by script. The end result is the same, though Poplar is more configurable if you want to make changes. 
+Larch and Poplar are both identical, Larch is a prepackaged box on vagrant cloud with everything included, Poplar is a vanilla debian box, with all packages and configuration done by script. The end result is the same, though Poplar is more configurable if you want to. Essentially Larch is a packaged version of Poplar. Poplar therefore may sometimes have a few things that haven't made it into Larch yet.
+
+##  Install speeds
+
+Larch   577627 ms (9.6 minutes)
+Poplar 1074355 ms (17.9 minutes)
+
+Compiled version does install a lot faster than the scripted version!
+
+
+
+
 
 
 
