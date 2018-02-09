@@ -8,7 +8,9 @@ v0.1.3
 
 ## TLDR / What is it?
 
-Development box for Vagrant. 
+Development box for Vagrant. I put everything in one box, it seems more economical of space and standardization than having lots of tiny boxes, and it still installs pretty quick (9-10 minutes).
+
+Larch is the prepackaged version, all the package installs and configuration already done. Poplar is the scripted version, uses a standad Debian box and the rest of the intallation and configuration is visible in the inline script. Both are essentially the same, Larch is quicker to install, Poplar more editable if you want to use as a base to create your own packaged box. Poplar may sometimes have some extra bits that I haven't got to packaging up into a new version yet
 
 Debian 8
 
