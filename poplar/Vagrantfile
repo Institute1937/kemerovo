@@ -7,7 +7,8 @@ sudo apt-get install -y tree software-properties-common git-core openssl libssl-
 ###--- Node ---###
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 
-
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
+echo "deb http://repo.mongodb.org/apt/debian jessie/mongodb-org/3.6 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list
 
 
 ###--- Elixir ---###
@@ -19,7 +20,7 @@ sudo apt-add-repository "deb [arch=amd64] https://download.docker.com/linux/$(. 
 sudo apt-get update
 
 ###--- Main Installs ---###
-sudo apt-get install default-jre libreadline-dev inotify-tools esl-erlang elixir nodejs docker-ce build-essential apt-transport-https ca-certificates gnupg2 autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm3 libgdbm-dev git-core libpq-dev postgresql postgresql-client -y
+sudo apt-get install mongodb-org python3-setuptools default-jre libreadline-dev inotify-tools esl-erlang elixir nodejs docker-ce build-essential apt-transport-https ca-certificates gnupg2 autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm3 libgdbm-dev git-core libpq-dev postgresql postgresql-client -y
 
 ###--- zsh ---###
 if [ ! -d ~vagrant/.oh-my-zsh ]; then
@@ -60,7 +61,10 @@ sudo tar -xvf go1.9.3.linux-amd64.tar.gz
 sudo mv go /usr/local
 rm go1.9.3.linux-amd64.tar.gz
 
-
+###--- Soundcloud and Youtube ---###
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+git clone https://github.com/flyingrub/scdl.git && cd scdl && sudo python3 setup.py install
+sudo chmod a+rx /usr/local/bin/youtube-dl
 
 ###--- Phoenix ---###
 mix local.hex --force
